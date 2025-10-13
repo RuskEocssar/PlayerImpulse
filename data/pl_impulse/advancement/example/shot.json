@@ -1,0 +1,22 @@
+{
+    "criteria": {
+        "shot":{
+            "trigger": "shot_crossbow",
+            "conditions": {
+                "item": {
+                    "predicates": {
+                        "custom_data": {
+                            "pl_impulse_ex":true
+                        }
+                    },
+                    "items": [
+                        "crossbow"
+                    ]
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "pl_impulse:example/shot"
+    }
+}

@@ -1,1 +1,0 @@
-give @p book[custom_data={right_click:{hold:"function pl_impulse:debug/makitori",hold_end:"function pl_impulse:debug/end"},left_click:{single_input:"function pl_impulse:debug/hok",double_input:"function pl_impulse:debug/hok_d"}}]
