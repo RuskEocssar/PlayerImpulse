@@ -14,6 +14,9 @@
         scoreboard objectives add pliS.setting dummy "設定"
         scoreboard objectives add pliS.rot_x dummy "向きx"
         scoreboard objectives add pliS.rot_y dummy "向きy"
+        scoreboard objectives add pliS.vec_x dummy "ベクトルx"
+        scoreboard objectives add pliS.vec_y dummy "ベクトルy"
+        scoreboard objectives add pliS.vec_z dummy "ベクトルz"
         scoreboard objectives add pliS.velocity dummy "大きさ"
 
 ## Score Holder

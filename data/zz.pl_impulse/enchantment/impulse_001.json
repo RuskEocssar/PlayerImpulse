@@ -29,8 +29,8 @@
                     "coordinate_scale": [1, 1, 1],
                     "magnitude": {
                         "type": "linear",
-                        "base": 0.1,
-                        "per_level_above_first": 0.1
+                        "base": 0.01,
+                        "per_level_above_first": 0.01
                     }
                 },
                 "requirements": [
@@ -55,8 +55,8 @@
                     "coordinate_scale": [1, 1, 1],
                     "magnitude": {
                         "type": "linear",
-                        "base": 0.1,
-                        "per_level_above_first": 0.1
+                        "base": 0.01,
+                        "per_level_above_first": 0.01
                     }
                 },
                 "requirements": [
@@ -81,8 +81,8 @@
                     "coordinate_scale": [1, 1, 1],
                     "magnitude": {
                         "type": "linear",
-                        "base": 0.1,
-                        "per_level_above_first": 0.1
+                        "base": 0.01,
+                        "per_level_above_first": 0.01
                     }
                 },
                 "requirements": [
@@ -106,6 +106,8 @@
                     "function": "zz.pl_impulse:impulse/tp_end_001"
                 }
             }
-        ]
+        ],
+        "prevent_equipment_drop": {},
+        "prevent_armor_change": {}
     }
 }

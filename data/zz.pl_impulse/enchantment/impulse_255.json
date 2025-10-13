@@ -29,8 +29,8 @@
                     "coordinate_scale": [1, 1, 1],
                     "magnitude": {
                         "type": "linear",
-                        "base": 25.5,
-                        "per_level_above_first": 25.5
+                        "base": 2.55,
+                        "per_level_above_first": 2.55
                     }
                 },
                 "requirements": [
@@ -55,8 +55,8 @@
                     "coordinate_scale": [1, 1, 1],
                     "magnitude": {
                         "type": "linear",
-                        "base": 25.5,
-                        "per_level_above_first": 25.5
+                        "base": 2.55,
+                        "per_level_above_first": 2.55
                     }
                 },
                 "requirements": [
@@ -81,8 +81,8 @@
                     "coordinate_scale": [1, 1, 1],
                     "magnitude": {
                         "type": "linear",
-                        "base": 25.5,
-                        "per_level_above_first": 25.5
+                        "base": 2.55,
+                        "per_level_above_first": 2.55
                     }
                 },
                 "requirements": [
@@ -106,6 +106,8 @@
                     "function": "zz.pl_impulse:impulse/tp_end_255"
                 }
             }
-        ]
+        ],
+        "prevent_equipment_drop": {},
+        "prevent_armor_change": {}
     }
 }
