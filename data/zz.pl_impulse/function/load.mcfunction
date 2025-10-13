@@ -9,7 +9,7 @@
 ## 入力の初期設定
     execute unless data storage pl_impulse: in run data modify storage pl_impulse: in set value {}
     execute unless data storage pl_impulse: in_default run data modify storage pl_impulse: in_default set value {\
-        velocity:20f,add:true,ineritia:false\
+        velocity:0.3f,add:true,inertia:false\
     }
     execute unless data storage pl_impulse:zz id run data modify storage pl_impulse:zz id set value {used:[]}
     
