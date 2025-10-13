@@ -4,15 +4,13 @@
 #   function zz.pl_impulse:**
 
 ## プレイヤーの向きを変更する
-    # アイテムの情報をロード
-    item replace entity 4fe002bb-0-6-0-a00000001 container.0 from entity @s saddle
-    data modify entity 4fe002bb-0-0-0-1 Rotation set from entity 4fe002bb-0-6-0-a00000001 Item.components."minecraft:custom_data".pl_impulse._rot
+    data modify storage pl_impulse:zz _ set value {rot:[0f,0f],mode:0b}
     # 向きの情報をロード
-    data modify storage pl_impulse:zz _.mode set value 0b
-    execute as 4fe002bb-0-0-0-1 at @s if entity @s[x_rotation=-90..-45] store success storage pl_impulse:zz _.mode byte 1 run rotate @s ~ ~90
-    execute as 4fe002bb-0-0-0-1 at @s if entity @s[x_rotation=45..90] store success storage pl_impulse:zz _.mode byte 2 run rotate @s ~ ~-90
-    execute store result score #pliH. pliS. run data get storage pl_impulse:zz _.mode
-    scoreboard players operation #pliH. pliS. += @s pliS.mode
+    execute store result storage pl_impulse:zz _.rot[0] float 0.001 run scoreboard players get @s pliS.rot_x
+    execute store result storage pl_impulse:zz _.rot[1] float 0.001 run scoreboard players get @s pliS.rot_y
+    data modify entity 4fe002bb-0-0-0-1 Rotation set from storage pl_impulse:zz _.rot
+    execute as 4fe002bb-0-0-0-1 at @s if entity @s[x_rotation=-135..-45] store success storage pl_impulse:zz _.mode byte 1 run rotate @s ~ ~90
+    execute as 4fe002bb-0-0-0-1 at @s if entity @s[x_rotation=45..135] store success storage pl_impulse:zz _.mode byte 2 run rotate @s ~ ~-90
     # プレイヤーをテレポート
     execute unless score @s pliS.setting matches 1 rotated as 4fe002bb-0-0-0-1 run tp @s ~ ~ ~ ~ ~
     execute if score @s pliS.setting matches 1 rotated as 4fe002bb-0-0-0-1 run rotate @s ~ ~

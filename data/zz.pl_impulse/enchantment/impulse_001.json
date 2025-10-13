@@ -1,0 +1,111 @@
+{
+    "description": {"text":"zz.pl_impulse:impulse"},
+    "supported_items": [],
+    "primary_items": [],
+    "weight": 1,
+    "max_level":255,
+    "min_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "max_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "anvil_cost": 0,
+    "slots": ["saddle"],
+    "effects": {
+        "minecraft:tick":[
+            {
+                "effect": {
+                    "type": "run_function",
+                    "function": "zz.pl_impulse:impulse/tp_pre"
+                }
+            },
+            {
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [0, 0, 1],
+                    "coordinate_scale": [1, 1, 1],
+                    "magnitude": {
+                        "type": "linear",
+                        "base": 0.1,
+                        "per_level_above_first": 0.1
+                    }
+                },
+                "requirements": [
+                    {
+                        "condition": "value_check",
+                        "value": {
+                            "type": "storage",
+                            "storage":"pl_impulse:zz",
+                            "path": "_.mode"
+                        },
+                        "range": {
+                            "min": 0,
+                            "max": 0
+                        }
+                    }
+                ]
+            },
+            {
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [0, 1, 0],
+                    "coordinate_scale": [1, 1, 1],
+                    "magnitude": {
+                        "type": "linear",
+                        "base": 0.1,
+                        "per_level_above_first": 0.1
+                    }
+                },
+                "requirements": [
+                    {
+                        "condition": "value_check",
+                        "value": {
+                            "type": "storage",
+                            "storage":"pl_impulse:zz",
+                            "path": "_.mode"
+                        },
+                        "range": {
+                            "min": 1,
+                            "max": 1
+                        }
+                    }
+                ]
+            },
+            {
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [0, -1, 0],
+                    "coordinate_scale": [1, 1, 1],
+                    "magnitude": {
+                        "type": "linear",
+                        "base": 0.1,
+                        "per_level_above_first": 0.1
+                    }
+                },
+                "requirements": [
+                    {
+                        "condition": "value_check",
+                        "value": {
+                            "type": "storage",
+                            "storage":"pl_impulse:zz",
+                            "path": "_.mode"
+                        },
+                        "range": {
+                            "min": 2,
+                            "max": 2
+                        }
+                    }
+                ]
+            },
+            {
+                "effect": {
+                    "type": "run_function",
+                    "function": "zz.pl_impulse:impulse/tp_end_001"
+                }
+            }
+        ]
+    }
+}

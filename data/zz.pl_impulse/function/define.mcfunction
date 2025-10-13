@@ -12,8 +12,12 @@
         scoreboard objectives add pliS. dummy "汎用"
         scoreboard objectives add pliS.mode dummy "モード"
         scoreboard objectives add pliS.setting dummy "設定"
+        scoreboard objectives add pliS.rot_x dummy "向きx"
+        scoreboard objectives add pliS.rot_y dummy "向きy"
+        scoreboard objectives add pliS.velocity dummy "大きさ"
 
 ## Score Holder
+    scoreboard players set #c255 _ 255
     scoreboard players set #c100000 _ 100000
 
 ## Tags
