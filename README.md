@@ -72,6 +72,8 @@ function pl_impulse:execute {func:"motion",in:{velocity:0.3f,add:false,inertia:t
 
 
 # 使用例(フックショット)
+![pl_impulse_example](https://github.com/user-attachments/assets/95bec221-3651-47b4-b739-3cf405d2d911)
+
 　`pl_impulse:execute/`内に、このデータパックを活用したフックショットのコマンドを用意してあります。使用手順は以下のとおりです。  
 
 1. クロスボウを入手  
