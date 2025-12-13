@@ -13,7 +13,7 @@
     kill @e[type=arrow,scores={_=3..}]
 
 ## Set LifeTime of arrow.
-    data modify entity @e[type=arrow,limit=1,scores={_=1}] life set value 1000
+    data modify entity @e[type=arrow,limit=1,scores={_=1}] {} merge value {LifeTime:1000}
     scoreboard players reset @e[type=arrow,scores={_=0..}] _
     tag @s remove _player
 
