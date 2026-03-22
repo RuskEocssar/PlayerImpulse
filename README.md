@@ -5,11 +5,13 @@ Player Motion Datapack with `apply_impulse` enchantment effect.
 
 *このデータパックはプレイヤーのサドルスロットを利用しているため、同様にサドルスロットを使用しているデータパックを併用する場合は、競合する可能性があります。
 
-対応バージョン：25w41a
+対応バージョン：25w41a ~ 26.1
 
 ## 目次
+- [PlayerImpulse](#playerimpulse)
+  - [目次](#目次)
 - [使い方](#使い方)
-- [使用例](#使用例)
+- [使用例(フックショット)](#使用例フックショット)
 
 # 使い方
 
@@ -40,8 +42,8 @@ pl_impulse: in {
 **使用例**
 ```mcfunction
 # 向きを設定
-execute rotated 0 -45 run data modify storage pl_impulse: in set valuse {velocity:0.3f}
-function pl_impulse:motion
+data modify storage pl_impulse: in set valuse {velocity:0.3f}
+execute rotated 0 -45 run function pl_impulse:motion
 
 # 加算なし
 data modify storage pl_impulse: in set valuse {velocity:0.3f,add:false}
